@@ -1,0 +1,7 @@
+@use "../helpers" as *;
+
+.main-heading {
+  font-size: 40px;
+  margin: 20px 0 40px;
+  @include text-gradient(bottom, #fff $altColor);
+}

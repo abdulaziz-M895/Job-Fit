@@ -1,0 +1,70 @@
+@use "variabels" as *;
+
+@mixin mediaMobile {
+  @media (max-width: 767px) {
+    @content;
+  }
+}
+
+@mixin minMedium {
+  @media (min-width: 992px) {
+    @content;
+  }
+}
+
+@mixin maxMedium {
+  @media (max-width: 991px) {
+    @content;
+  }
+}
+
+@mixin overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  display: block;
+}
+
+@mixin center-flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin between-flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@mixin col-flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+@mixin text-gradient($direction, $colors) {
+  $list: ();
+  @for $i from 1 through length($colors) {
+    $list: append($list, nth($colors, $i), comma);
+  }
+  @if map-has-key($map-for-directions, $direction) {
+    background: linear-gradient(
+      map-get($map-for-directions, $direction),
+      $list
+    );
+  } @else if not map-has-key($map-for-directions, $direction) {
+    @if not index("deg", unit($direction)) {
+      @error "#{$direction} is a wrong value for the $direction parameter. The value must be eighter a number followed by the 'deg' unit or one of the followings: #{map-keys($map-for-directions)}.";
+    } @else {
+      background: linear-gradient($direction, $list);
+    }
+  }
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}

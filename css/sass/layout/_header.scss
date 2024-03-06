@@ -1,0 +1,107 @@
+@use "../helpers" as *;
+@use "../components" as c;
+
+.navbar {
+  background-color: white !important;
+  img {
+    height: 50px;
+  }
+  .navbar-toggler {
+    border: 2px solid $mainColor;
+    color: $mainColor !important;
+    background-color: white;
+    @include col-flex;
+    padding: 7px 12px;
+    gap: 7px;
+    &:focus {
+      box-shadow: none;
+    }
+    .navbar-toggler-icon {
+      background-image: none;
+      width: 30px;
+      height: 2.5px;
+      border-radius: 10px;
+      background: $mainColor;
+      transition: 0.3s;
+      position: relative;
+      &:nth-of-type(2) {
+        transition-delay: 0.2s;
+      }
+    }
+  }
+  .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:first-of-type {
+    transform: rotate(-50deg);
+    top: 10px;
+  }
+  .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:nth-of-type(2) {
+    z-index: -2;
+    opacity: 0;
+  }
+  .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:last-of-type {
+    transform: rotate(50deg);
+    bottom: 9px;
+  }
+  .nav-item a {
+    color: #000;
+    padding: 8px 8px 8px 15px !important;
+    @include maxMedium {
+      padding: 8px 8px 15px 15px !important;
+    }
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      height: 3px;
+      background-color: $mainColor;
+      bottom: -20.5px;
+      left: 50%;
+      transform: translateX(-44%);
+      transition: 0.3s;
+      @include maxMedium {
+        display: none;
+      }
+    }
+    &:hover {
+      color: $mainColor;
+    }
+    &:hover::before {
+      padding: 0 50%;
+    }
+  }
+  .jobs {
+    gap: 20px;
+    @include minMedium {
+      margin-right: 210px;
+    }
+    @include maxMedium {
+      justify-content: center;
+      margin: 10px 0 !important;
+    }
+    a {
+      color: $DarkAltColor;
+      font-weight: 600;
+      position: relative;
+      font-size: 17px;
+      padding: 10px !important;
+      border-radius: 10px;
+      @include maxMedium {
+        background-color: $mainColor;
+        color: white;
+      }
+      &::before {
+        content: "";
+        transform: translateX(-50%) !important;
+        bottom: -15px !important;
+      }
+      &:hover {
+        color: $mainColor;
+        @include maxMedium {
+          color: white;
+        }
+      }
+      &:hover::before {
+        padding: 0 50%;
+      }
+    }
+  }
+}

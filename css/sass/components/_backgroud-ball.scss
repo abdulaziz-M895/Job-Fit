@@ -1,0 +1,27 @@
+@use "../helpers" as *;
+
+.ball {
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  z-index: -1;
+  background-color: $DarkAltColor;
+}
+
+.ball.left {
+  left: -100px;
+  top: 500px;
+}
+.ball.right {
+  right: -100px;
+  top: -100px;
+  @include maxMedium {
+    right: 0;
+  }
+  &.change-top {
+    @include mediaMobile {
+      top: -230px;
+    }
+  }
+}
