@@ -213,6 +213,11 @@ footer {
 footer .row:first-of-type {
   padding-bottom: 20px;
 }
+@media (max-width: 767px) {
+  footer .row:first-of-type .image {
+    text-align: center;
+  }
+}
 footer .row:first-of-type .image img {
   width: 125px;
   border-radius: 20px;

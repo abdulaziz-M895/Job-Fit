@@ -5,6 +5,9 @@ footer {
   .row:first-of-type {
     padding-bottom: 20px;
     .image {
+      @include mediaMobile {
+        text-align: center;
+      }
       img {
         width: 125px;
         border-radius: 20px;
