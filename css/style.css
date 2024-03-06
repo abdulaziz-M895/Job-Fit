@@ -21,6 +21,18 @@ ul {
   list-style: none;
 }
 
+::-webkit-scrollbar {
+  width: 0.7rem;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #caa04a;
+}
+
 .main-button {
   background-image: linear-gradient(70deg, #caa04a, rgb(230, 230, 230));
   display: block;
@@ -158,6 +170,9 @@ ul {
 }
 .navbar .nav-item a:hover::before {
   padding: 0 50%;
+}
+.navbar .nav-item a.active {
+  color: #caa04a;
 }
 .navbar .jobs {
   gap: 20px;

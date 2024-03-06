@@ -67,6 +67,9 @@
     &:hover::before {
       padding: 0 50%;
     }
+    &.active {
+      color: $mainColor;
+    }
   }
   .jobs {
     gap: 20px;

@@ -30,3 +30,12 @@ a {
 ul {
   list-style: none;
 }
+::-webkit-scrollbar {
+  width: 0.7rem;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: $mainColor;
+}
