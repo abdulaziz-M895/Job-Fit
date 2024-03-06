@@ -3,6 +3,10 @@
           box-sizing: border-box;
 }
 
+html {
+  overflow-x: hidden;
+}
+
 body {
   font-family: "Poppins", sans-serif;
   font-weight: 500;
@@ -57,11 +61,6 @@ ul {
 .ball.right {
   right: -100px;
   top: -100px;
-}
-@media (max-width: 991px) {
-  .ball.right {
-    right: 0;
-  }
 }
 @media (max-width: 767px) {
   .ball.right.change-top {
@@ -218,6 +217,11 @@ footer .row:first-of-type .image img {
   width: 120px;
   border-radius: 20px;
 }
+@media (max-width: 767px) {
+  footer .row:first-of-type .image img {
+    margin: auto;
+  }
+}
 footer .row:first-of-type .image p {
   font-size: 14px;
   background: -webkit-gradient(linear, left top, left bottom, from(#a0a0a0), to(#fff));
@@ -262,6 +266,18 @@ footer .row:last-of-type {
 }
 footer .row:last-of-type .content {
   color: #404040;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 footer .row:last-of-type .content .fa-heart {
   font-size: 13px;
@@ -285,7 +301,6 @@ body > div:first-of-type {
 }
 
 .landing {
-  height: 70vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

@@ -16,9 +16,9 @@
 .ball.right {
   right: -100px;
   top: -100px;
-  @include maxMedium {
-    right: 0;
-  }
+  // @include maxMedium {
+  //   right: 0;
+  // }
   &.change-top {
     @include mediaMobile {
       top: -230px;

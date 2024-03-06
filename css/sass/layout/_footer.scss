@@ -8,6 +8,9 @@ footer {
       img {
         width: 120px;
         border-radius: 20px;
+        @include mediaMobile {
+          margin: auto;
+        }
       }
       p {
         font-size: 14px;
@@ -43,6 +46,9 @@ footer {
     border-top: 1px solid $DarkAltColor;
     .content {
       color: $DarkAltColor;
+      display: flex;
+      @include center-flex;
+      flex-wrap: wrap;
       .fa-heart {
         font-size: 13px;
         margin: 0 5px;
