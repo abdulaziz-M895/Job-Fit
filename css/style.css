@@ -553,4 +553,95 @@ body > div:first-of-type {
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
 }
+
+.about h1 {
+  position: relative;
+  margin-left: 15px;
+}
+.about h1::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -15px;
+  width: 5px;
+  height: 100%;
+  background-color: #caa04a;
+}
+.about > div {
+  padding: 30px 0;
+}
+
+.about-jobfit {
+  background-image: url("../../../imgs/graphs.jpg");
+  background-position: center;
+  background-size: cover;
+  color: white;
+  font-size: 27px;
+  padding: 30px 0 !important;
+}
+.about-jobfit h1 {
+  position: relative;
+  font-size: 30px;
+}
+.about-jobfit h1::before {
+  display: none;
+}
+
+.in-brief {
+  color: white;
+}
+.in-brief h1 {
+  margin-bottom: 20px;
+}
+.in-brief p {
+  font-size: 18px;
+  line-height: 1.7;
+}
+
+.values {
+  background: -webkit-gradient(linear, left top, left bottom, from(#caa04a), to(#5a3c01));
+  background: linear-gradient(#caa04a, #5a3c01);
+}
+.values .content {
+  border-radius: 10px;
+  padding: 20px;
+  height: 250px;
+  color: white;
+}
+.values .content h2 {
+  position: relative;
+  margin-bottom: 20px;
+}
+.values .content h2::before {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 5px;
+  width: 80px;
+  height: 5px;
+  background-color: #a0a0a0;
+}
+.values .content ul {
+  list-style: initial;
+  padding-left: 20px;
+}
+.values .content p,
+.values .content li {
+  position: relative;
+  z-index: 2;
+  color: white;
+}
+.values .content img {
+  position: absolute;
+  width: 80px;
+  right: 10px;
+  bottom: 10px;
+  z-index: 1;
+}
+.values .content .fa-people-group {
+  font-size: 60px;
+  color: #a0a0a0;
+  right: 10px;
+  bottom: 10px;
+}
 /*# sourceMappingURL=style.css.map */
