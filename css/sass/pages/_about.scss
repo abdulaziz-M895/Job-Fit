@@ -38,9 +38,9 @@
   .content {
     border-radius: 10px;
     padding: 20px;
-    height: 265px;
+    height: 100%;
     color: white;
-    background: linear-gradient($mainColor, #5a3c01);
+    background-color: $blueColor;
     width: 100%;
     h2 {
       position: relative;
@@ -53,7 +53,7 @@
         left: 5px;
         width: 80px;
         height: 5px;
-        background-color: $altColor;
+        background-color: $mainColor;
       }
     }
     ul {
@@ -75,7 +75,7 @@
     }
     .fa-people-group {
       font-size: 65px;
-      color: $altColor;
+      color: $mainColor;
       bottom: 10px;
       right: 10px;
     }
@@ -83,6 +83,23 @@
 }
 .our-services {
   color: white;
+  .dots {
+    background-image: url("../../../imgs/dots.png");
+    height: 186px;
+    width: 204px;
+    background-repeat: no-repeat;
+    position: absolute;
+    z-index: -1;
+    filter: hue-rotate(565deg);
+    &.dots-up {
+      top: 50px;
+      right: 0;
+    }
+    &.dots-down {
+      bottom: 0px;
+      left: 0;
+    }
+  }
   h1 {
     margin-bottom: 40px !important;
   }
@@ -93,6 +110,8 @@
     color: white;
     width: 100%;
     line-height: 1.9;
+    background-color: $blueColor;
+    height: 100%;
     .heading {
       margin-bottom: 20px;
       img {
