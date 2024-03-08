@@ -1,0 +1,27 @@
+@use "../helpers" as *;
+* {
+  box-sizing: border-box;
+}
+html {
+  overflow-x: hidden;
+}
+body {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  background-color: #1e1e1e;
+}
+a {
+  text-decoration: none;
+}
+ul {
+  list-style: none;
+}
+::-webkit-scrollbar {
+  width: 0.7rem;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: $mainColor;
+}
