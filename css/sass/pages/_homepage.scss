@@ -62,29 +62,86 @@ body > div {
 .work-with {
   .content {
     @include maxMedium {
-      flex-direction: column-reverse;
+      flex-direction: column;
     }
-    h1 {
+    .text {
+      width: 45%;
       @include maxMedium {
-        text-align: center;
+        width: 100%;
+        margin-bottom: 120px;
       }
-    }
-    p {
-      color: $altColor;
-      margin-bottom: 30px;
-      @include maxMedium {
-        text-align: center;
+      h1 {
+        @include maxMedium {
+          text-align: center;
+        }
+        span {
+          @include text-gradient(top, $mainColor #fff);
+        }
+      }
+      p {
+        color: $altColor;
+        margin-bottom: 30px;
+        @include maxMedium {
+          text-align: center;
+        }
       }
     }
     .image {
-      flex-basis: 50%;
-      @include center-flex;
+      width: 502px;
+      display: flex;
+      align-items: flex-end;
+      justify-content: flex-end;
+      position: relative;
+      margin-bottom: -110px;
+      @include maxMedium {
+        justify-content: center;
+        width: 400px;
+      }
       img {
-        @include maxMedium {
-          max-width: 40%;
-        }
-        max-width: 100%;
         border-radius: 50%;
+        &:first-of-type {
+          max-width: 60%;
+        }
+        &:nth-of-type(2) {
+          max-width: 27%;
+          position: absolute;
+          top: -7%;
+          left: 10%;
+          @include maxMedium {
+            top: -32%;
+            left: 0px;
+          }
+        }
+        &:nth-of-type(3) {
+          max-width: 25%;
+          position: absolute;
+          top: -37%;
+          right: 0;
+          @include maxMedium {
+            top: -37%;
+            right: 0%;
+          }
+        }
+        &:nth-of-type(4) {
+          max-width: 25%;
+          position: absolute;
+          bottom: 5%;
+          left: 15%;
+          @include maxMedium {
+            left: 0%;
+            bottom: -17%;
+          }
+        }
+        &:nth-of-type(5) {
+          max-width: 25%;
+          position: absolute;
+          top: -39%;
+          left: 42%;
+          @include maxMedium {
+            left: 77%;
+            top: 74%;
+          }
+        }
       }
     }
   }
